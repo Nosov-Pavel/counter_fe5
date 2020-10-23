@@ -8,10 +8,10 @@ function App() {
         {value: 1, id: 2},
         {value: 2, id: 3},
     ])
+    const [inputValue, setInputValue] = useState('');
 
     const addButton = () => {
         const newList = [...list, {value:0, id: Math.random()}];
-        console.log('newList', newList)
         setList(newList);
     }
 
@@ -19,6 +19,7 @@ function App() {
 
     return (
         <div>
+            <input type='text'/>
             <button onClick={addButton}>create</button>
             <hr/>
             {list.map(el =>
