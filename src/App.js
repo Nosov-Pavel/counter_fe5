@@ -14,6 +14,16 @@ function App() {
         const newList = [...list, {value:inputValue, id: Math.random()}];
         setList(newList);
     }
+    const counterPlus = (id) => {
+        const newList = list.map(el=>{
+            if (el.id === id) {
+                return {value: el.value+1, id: el.id}
+            }
+            return el
+        })
+
+        setList(newList)
+    }
 
     return (
         <div>
@@ -24,7 +34,7 @@ function App() {
             <div key={el.id}>
                 <button>-</button>
                 {el.value}
-                <button>+</button>
+                <button onClick={() => counterPlus(el.id)}>+</button>
             </div>)}
         </div>
     );
