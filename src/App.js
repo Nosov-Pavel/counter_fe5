@@ -10,7 +10,8 @@ function App() {
     ])
 
     const addButton = () => {
-        const newList = [...list, 1];
+        const newList = [...list, {value:0, id: Math.random()}];
+        console.log('newList', newList)
         setList(newList);
     }
 
