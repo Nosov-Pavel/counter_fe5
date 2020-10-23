@@ -16,10 +16,14 @@ function App() {
     }
 
 
+    const inputHandler = (e) => {
+        setInputValue(e.target.value)
+
+    }
 
     return (
         <div>
-            <input type='text'/>
+            <input type='text' onChange={inputHandler}/>
             <button onClick={addButton}>create</button>
             <hr/>
             {list.map(el =>
