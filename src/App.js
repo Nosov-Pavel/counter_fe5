@@ -8,11 +8,12 @@ function App() {
         {value: 1, id: 2},
         {value: 2, id: 3},
     ])
-    const [inputValue, setInputValue] = useState('');
+    const [inputValue, setInputValue] = useState(0);
 
     const addButton = () => {
         const newList = [...list, {value:inputValue, id: Math.random()}];
         setList(newList);
+        setInputValue(0);
     }
     const counterPlus = (id, value) => {
         const newList = list.map(el=>{
@@ -28,7 +29,7 @@ function App() {
 
     return (
         <div>
-            <input type='text' onChange={(e) => setInputValue(+e.target.value)}/>
+            <input type='text' value={inputValue} onChange={(e) => setInputValue(+e.target.value)}/>
             <button onClick={addButton}>create</button>
             <hr/>
             {list.map(el =>
