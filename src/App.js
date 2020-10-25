@@ -34,16 +34,16 @@ function App() {
             <input type='text' value={inputValue} onChange={(e) => setInputValue(+e.target.value)}/>
             <button onClick={addButton}>create</button>
             <hr/>
-            {list.map(el =>
-            <div key={el.id}>
+            {list.map(elem =>
+            <div key={elem.id}>
                 {/*<button onClick={() => counterPlus(el.id,  -5)}>-5</button>*/}
                 {/*<button onClick={() => counterPlus(el.id,  -4)}>-4</button>*/}
                 {/*<button onClick={() => counterPlus(el.id,  -3)}>-3</button>*/}
                 {/*<button onClick={() => counterPlus(el.id,  -2)}>-2</button>*/}
                 {/*<button onClick={() => counterPlus(el.id,  -1)}>-1</button>*/}
-                {buttonsArr1.map(el => <button>{-el}</button>)}
-                {el.value}
-                {buttonsArr2.map(el => <button>{el}</button>)}
+                {buttonsArr1.map(el => <button onClick={()=> counterPlus(elem.id, -el)}>{-el}</button>)}
+                {elem.value}
+                {buttonsArr1.map(el => <button onClick={()=> counterPlus(elem.id, el)}>{el}</button>)}
                 {/*<button onClick={() => counterPlus(el.id,1)}>+1</button>*/}
                 {/*<button onClick={() => counterPlus(el.id,2)}>+2</button>*/}
                 {/*<button onClick={() => counterPlus(el.id,3)}>+3</button>*/}
