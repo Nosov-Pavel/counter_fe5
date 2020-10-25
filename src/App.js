@@ -34,9 +34,13 @@ function App() {
             <hr/>
             {list.map(el =>
             <div key={el.id}>
-                <button onClick={() => counterPlus(el.id,  -1)}>-</button>
+                <button onClick={() => counterPlus(el.id,  -1)}>-1</button>
+                <button onClick={() => counterPlus(el.id,  -2)}>-2</button>
+                <button onClick={() => counterPlus(el.id,  -3)}>-3</button>
                 {el.value}
-                <button onClick={() => counterPlus(el.id,1)}>+</button>
+                <button onClick={() => counterPlus(el.id,1)}>+1</button>
+                <button onClick={() => counterPlus(el.id,2)}>+2</button>
+                <button onClick={() => counterPlus(el.id,3)}>+3</button>
             </div>)}
         </div>
     );
