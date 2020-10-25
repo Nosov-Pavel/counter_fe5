@@ -9,8 +9,8 @@ function App() {
         {value: 2, id: 3, numberOfButtons: [1, 2, 3]},
     ])
     const [inputValue, setInputValue] = useState(0);
-    const buttonsArr1 = [5, 4, 3, 2, 1];
-    const buttonsArr2 = [1, 2, 3, 4, 5]
+    const [number, setNumber] = useState(0);
+
 
     const addButton = () => {
         const newCounter = {
