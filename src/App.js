@@ -40,7 +40,7 @@ function App() {
                 {/*<button onClick={() => counterPlus(el.id,  -3)}>-3</button>*/}
                 {/*<button onClick={() => counterPlus(el.id,  -2)}>-2</button>*/}
                 {/*<button onClick={() => counterPlus(el.id,  -1)}>-1</button>*/}
-                {buttonsArr.map(el => <button>{-el}</button>)}
+                {buttonsArr.reverse().map(el => <button>{-el}</button>)}
                 {el.value}
                 <button onClick={() => counterPlus(el.id,1)}>+1</button>
                 <button onClick={() => counterPlus(el.id,2)}>+2</button>
