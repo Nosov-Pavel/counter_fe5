@@ -16,7 +16,7 @@ function App() {
         const newCounter = {
             value:inputValue,
             id: Math.random(),
-            numberOfButtons: [1]
+            numberOfButtons: [4]
         }
 
         const newList = [...list, newCounter ];
@@ -38,6 +38,7 @@ function App() {
     return (
         <div>
             <input type='text' value={inputValue} onChange={(e) => setInputValue(+e.target.value)}/>
+            <input type="text"/>
             <button onClick={addButton}>create</button>
             <hr/>
             {list.map(elem =>
