@@ -13,7 +13,13 @@ function App() {
     const buttonsArr2 = [1, 2, 3, 4, 5]
 
     const addButton = () => {
-        const newList = [...list, {value:inputValue, id: Math.random()}];
+        const newCounter = {
+            value:inputValue,
+            id: Math.random(),
+            numberOfButtons: [1]
+        }
+
+        const newList = [...list, newCounter ];
         setList(newList);
         setInputValue(0);
     }
