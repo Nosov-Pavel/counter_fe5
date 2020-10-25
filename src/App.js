@@ -4,9 +4,9 @@ import './App.css';
 
 function App() {
     const [list, setList] = useState([
-        {value: 0, id: 1},
-        {value: 1, id: 2},
-        {value: 2, id: 3},
+        {value: 0, id: 1, numberOfButtons: [1]},
+        {value: 1, id: 2, numberOfButtons: [1, 2, 3, 4, 5]},
+        {value: 2, id: 3, numberOfButtons: [1, 2, 3]},
     ])
     const [inputValue, setInputValue] = useState(0);
     const buttonsArr1 = [5, 4, 3, 2, 1];
@@ -36,19 +36,9 @@ function App() {
             <hr/>
             {list.map(elem =>
             <div key={elem.id}>
-                {/*<button onClick={() => counterPlus(el.id,  -5)}>-5</button>*/}
-                {/*<button onClick={() => counterPlus(el.id,  -4)}>-4</button>*/}
-                {/*<button onClick={() => counterPlus(el.id,  -3)}>-3</button>*/}
-                {/*<button onClick={() => counterPlus(el.id,  -2)}>-2</button>*/}
-                {/*<button onClick={() => counterPlus(el.id,  -1)}>-1</button>*/}
-                {buttonsArr1.map(el => <button onClick={()=> counterPlus(elem.id, -el)}>{-el}</button>)}
+                {elem.numberOfButtons.map(el => <button onClick={()=> counterPlus(elem.id, -el)}>{-el}</button>)}
                 {elem.value}
-                {buttonsArr1.map(el => <button onClick={()=> counterPlus(elem.id, el)}>{el}</button>)}
-                {/*<button onClick={() => counterPlus(el.id,1)}>+1</button>*/}
-                {/*<button onClick={() => counterPlus(el.id,2)}>+2</button>*/}
-                {/*<button onClick={() => counterPlus(el.id,3)}>+3</button>*/}
-                {/*<button onClick={() => counterPlus(el.id,4)}>+4</button>*/}
-                {/*<button onClick={() => counterPlus(el.id,5)}>+5</button>*/}
+                {elem.numberOfButtons.map(el => <button onClick={()=> counterPlus(elem.id, el)}>{el}</button>)}
             </div>)}
         </div>
     );
