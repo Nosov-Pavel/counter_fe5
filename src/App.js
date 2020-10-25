@@ -9,7 +9,8 @@ function App() {
         {value: 2, id: 3},
     ])
     const [inputValue, setInputValue] = useState(0);
-    const buttonsArr = [1, 2, 3, 4, 5];
+    const buttonsArr1 = [5, 4, 3, 2, 1];
+    const buttonsArr2 = [1, 2, 3, 4, 5]
 
     const addButton = () => {
         const newList = [...list, {value:inputValue, id: Math.random()}];
@@ -40,13 +41,14 @@ function App() {
                 {/*<button onClick={() => counterPlus(el.id,  -3)}>-3</button>*/}
                 {/*<button onClick={() => counterPlus(el.id,  -2)}>-2</button>*/}
                 {/*<button onClick={() => counterPlus(el.id,  -1)}>-1</button>*/}
-                {buttonsArr.reverse().map(el => <button>{-el}</button>)}
+                {buttonsArr1.map(el => <button>{-el}</button>)}
                 {el.value}
-                <button onClick={() => counterPlus(el.id,1)}>+1</button>
-                <button onClick={() => counterPlus(el.id,2)}>+2</button>
-                <button onClick={() => counterPlus(el.id,3)}>+3</button>
-                <button onClick={() => counterPlus(el.id,4)}>+4</button>
-                <button onClick={() => counterPlus(el.id,5)}>+5</button>
+                {buttonsArr2.map(el => <button>{el}</button>)}
+                {/*<button onClick={() => counterPlus(el.id,1)}>+1</button>*/}
+                {/*<button onClick={() => counterPlus(el.id,2)}>+2</button>*/}
+                {/*<button onClick={() => counterPlus(el.id,3)}>+3</button>*/}
+                {/*<button onClick={() => counterPlus(el.id,4)}>+4</button>*/}
+                {/*<button onClick={() => counterPlus(el.id,5)}>+5</button>*/}
             </div>)}
         </div>
     );
