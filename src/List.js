@@ -7,6 +7,8 @@ function List() {
     return (
         <div>
             {noute}
+            <input type="text"/>
+            <button></button>
 
         </div>
     );
