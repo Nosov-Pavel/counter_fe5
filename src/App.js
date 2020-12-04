@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import './App.css';
+import List from "./List";
 
 
 function App() {
@@ -53,6 +54,7 @@ function App() {
                 {elem.value}
                 {elem.numberOfButtons.map(el => <button onClick={()=> counterPlus(elem.id, el)}>{el}</button>)}
             </div>)}
+            <List/>
         </div>
     );
 }
