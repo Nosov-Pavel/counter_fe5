@@ -7,8 +7,9 @@ function List() {
 
         setNoute('newNoute')
     }
-    const onInputChange = () => {
-        console.log('Hello')
+    const onInputChange = (event) => {
+        console.log()
+        setNoute(event.target.value)
     }
 
     return (
