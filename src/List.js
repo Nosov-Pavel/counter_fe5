@@ -3,9 +3,9 @@ import React, {useState} from "react";
 
 function List() {
     const [noute, setNoute] = useState('Apple')
+    const [input, setInput] = useState('')
     const setNewNoute = () => {
-
-        setNoute('newNoute')
+        setNoute(input)
     }
     const onInputChange = (event) => {
         console.log()
